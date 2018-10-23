@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Button = styled.a`
+const red = "#710627";
+
+const Button = styled.button`
   text-decoration: none;
   text-align: center;
+  font-size: 20px;
   display: inline-block;
   border-radius: 5px;
   padding: 0.5rem 0;
   margin: 0.5rem 1rem;
   width: 11rem;
-  color: white;
   border: 2px solid white;
 
-  background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
+  background: ${props => props.primary ? `${red}` : "white"};
+  color: ${props => props.primary ? "white" : `${red}`};
   &:hover{
     color: black;
   }
-
 `
 
-const Tomato = styled(Button)`
-  color: tomato;
-  border-color: tomato;
-`
 
 class Home extends Component {
   render() {
@@ -35,7 +32,6 @@ class Home extends Component {
           rel="noopener"
           primary>Cardio</Button>
         <Button>Bodybuilding</Button>
-        <Tomato>Welcome to the Jungle</Tomato>
       </div>
     );
   }

@@ -6,9 +6,17 @@ import Routines from './Routines.js';
 import styled from 'styled-components';
 import '../css/index.css'
 
+
 const NavLink = styled(Link)`
+  &:hover{
+    color: black;
+  }
+
   font-size: 30px;
+  text-decoration: none;
   padding-left: 15px;
+  color: #710627; {/* dark red */}
+
 `
 
 const Header = () => (
