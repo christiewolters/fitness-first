@@ -8,8 +8,7 @@ const Image = styled.img`
 class Home extends Component {
   render() {
     return (
-      <div>
-        <h1>FitnessFirst</h1>
+      <div>        
         <Image src={require('../img/fitness.jpg')} alt=""/>
       </div>
     );

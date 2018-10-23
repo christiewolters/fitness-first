@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Home from './Home.js';
 import Videos from './Videos.js';
+import styled from 'styled-components';
+import '../css/index.css'
 
+const NavLink = styled(Link)`
+  font-size: 30px;
+  padding-left: 15px;  
+`
 
 const Header = () => (
-  <header>
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/videos'>Videos</Link></li>
-      </ul>
-    </nav>
+  <header className="navbar">
+    <span><strong>FitnessFirst</strong></span>
+    <NavLink to='/'>Home</NavLink>
+    <NavLink to='/videos'>Videos</NavLink>
   </header>
 )
+
 const Main = () => (
   <main>
     <Switch>
