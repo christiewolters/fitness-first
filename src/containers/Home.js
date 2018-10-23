@@ -5,7 +5,6 @@ const Image = styled.img`
   width: 100%;
 `
 
-
 class Home extends Component {
   render() {
     return (
