@@ -1,15 +1,41 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Image = styled.img`
-  width: 100%;
+const Button = styled.a`
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  color: white;
+  border: 2px solid white;
+
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+  &:hover{
+    color: black;
+  }
+
+`
+
+const Tomato = styled(Button)`
+  color: tomato;
+  border-color: tomato;
 `
 
 class Home extends Component {
   render() {
     return (
-      <div>        
-        <Image src={require('../img/fitness.jpg')} alt=""/>
+      <div>
+        <Button
+          href='https://FitnessFirst.herokuapp.com/routines'
+          target="_blank"
+          rel="noopener"
+          primary>Cardio</Button>
+        <Button>Bodybuilding</Button>
+        <Tomato>Welcome to the Jungle</Tomato>
       </div>
     );
   }

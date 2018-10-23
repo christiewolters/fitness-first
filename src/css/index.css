@@ -2,12 +2,3 @@
   font-size: 30px;
   padding: 5px 0px 15px 15px;
 }
-
-a:hover{
-  color: black;
-  text-decoration: none;
-}
-
-a:visited{  
-  text-decoration: none;
-}
